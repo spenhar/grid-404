@@ -9,9 +9,248 @@
   <script src="//use.typekit.net/awt5vfk.js"></script>
   <script>try{Typekit.load();}catch(e){}</script>
 
-  <style>
+  <style type="text/css">
+        
+    /* Reset */
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    /* Site wide */
+    * {
+      font-family: 'Helvetica Neue',Helvetica,Arial,_sans;
+      font-style: normal;
+      font-weight: lighter;
+    }
+
+    /* thegrid.io link */
+    a {
+      /*font-size: 14px;*/
+      color: #ffffff;
+      letter-spacing: .04rem;
+      /*font-weight: 400;*/
+      /*color: rgba(255,255,255,.3);*/
+      /*BLUE*/
+      color: rgba(26,178,255,.9); 
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: #ffffff;
+      letter-spacing: .08rem;
+      font-weight: lighter;
+      line-height: 2rem;
+      color: white;
+      margin-top: 1.4rem;
+    }
+
+    a, p {
+      margin-left: .2rem;
+      text-decoration: none;
+    }
+
+    /* Current status */
+
+
+    h1 {
+      color: #ffffff;
+      font-size: 5rem;
+      font-weight: 100;
+      line-height: 5rem;
+      margin-top: 1rem;
+      width: 95%;
+    }
+
+    h2 {
+      color: #ffffff;
+      font-size: 3.4rem;
+      font-weight: 100;
+      line-height: 4.4rem;
+      letter-spacing: .2rem;
+      margin-top: 1rem;
+      /*width: 95%;*/
+    }
+
+    h4{
+      color: #FEF597;
+      font-weight: 500;
+      margin-top: 3rem;
+      letter-spacing: .04rem;
+      line-height: 1.4rem;
+    }
+
+    h6{
+      font-size: .7rem;
+      letter-spacing: .15rem;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.3);
+      font-weight: 500;
+    }
+
+    body{
+      background: #222;
+    }
+
+    .logo{
+      fill:rgb(242,231,109);
+      width: 26px;
+      height: 26px;
+      margin-bottom: 2rem;
+      border: none;
+    }
+
+    .content{
+      width: 100%;
+      height: 100%;
+      padding: 12%;
+      left: 0;
+      top: 0;
+      box-sizing: border-box;
+      position: absolute;
+      margin-bottom: 15rem;
+      background-color: rgba(31, 30, 29, .9);
+    }
+    .background{
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #222;
+      opacity: .3;
+      background-color: rgba(31, 30, 29, .9);
+      background-size: cover;
+      z-index: 0;
+    }
+    .footer-links {
+      margin-top: 2rem;
+      position: relative;
+      display: inline-block;
+      border-bottom: 2px solid rgba(26,178,255,.9);
+      width: auto;
+      margin-right: 1rem;
+    }
+
+    #activeUsers-text {
+      margin-top: .8rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      h2 {
+        font-size: 6rem !important;
+        line-height: 7rem !important;
+        width: 80%;
+      }
+      p {
+        width: 80%;
+      }
+    }
+
+    /* IPAD and above*/
+
+    @media screen and (min-width: 768px) {
+      html{
+        font-size: 20px;
+      }
+      h1{
+        font-size: 9rem;
+        line-height: 9rem;
+      }
+      h2 {
+        font-size: 5rem;
+        line-height: 6rem;
+      }
+      h6 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 1.6rem;
+        letter-spacing: .08rem;
+        font-weight: lighter;
+        line-height: 2.4rem;
+        /*color: rgba(255,255,255,.6);*/
+        margin-top: 1.4rem;
+      }
+
+      .content{
+        padding: 10% 12%;
+      }
+    }
+
+    /* IPAD and above*/
+
+    /*@media screen and (min-width: 768px) {
+      h1{
+        font-size: 9rem;
+        line-height: 9rem;
+      }
+    }*/
+
+    /* IPHONE 6+ and below*/
+
+    @media screen and (max-width: 414px) {
+      .content{
+        padding: 14% 10%;
+      }
+      #activeUsers-text {
+        margin-top: .4rem;
+      }
+    }
+
+    /* IPHONE 5 and below*/
+
+    @media screen and (max-width: 320px) {
+      html{
+        font-size: 20px;
+      }
+      h1{
+        font-size: 4.6rem;
+        line-height: 4.4rem;
+      }
+      h2{
+        font-size: 2.7rem;
+        line-height: 3.8rem;
+        margin-top: -.2rem;
+      }
+      p {
+        font-size: 1.2rem;
+        color: #ffffff;
+        letter-spacing: .08rem;
+        font-weight: lighter;
+        line-height: 2rem;
+        /*color: rgba(255,255,255,.6);*/
+        margin-top: 1rem;
+      }
+
+      .content{
+        padding: 12% 10%;
+      }
+      #foundingMembers {
+        margin-top: -.2rem;
+      }
+      #activeUsers-text {
+        margin-top: .3rem;
+      }
+    }
+
+    @media screen and (max-height: 778px) {
+      html{
+        font-size: 16px;
+      }
+    /*  .content{
+        padding: 8% 10%;
+      }*/
+    }
+
+
+
+/*----------------------------------------------*/
+
+
     html {
-      margin: 0;
+      margin: 0;  
       height: 100%;
       width: 100%;
     }
@@ -20,7 +259,8 @@
       height: 100%;
       width: 100%;
       margin: 0; 
-      font-family: 'source-sans-pro',Helvetica Neue,Helvetica,Arial,sans-serif; 
+      font-family: 'source-sans-pro', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+      font-weight: 100;
       color: white; 
       background-image: url(img/gridbear.jpg); 
       background-size: cover; 
@@ -36,34 +276,59 @@
     .text-column {
       max-width: 648px; top: 16%; margin: 2rem; padding: 2rem;
     }
-
-    h1 {
-      font-size: 14rem; 
-      line-height: 12rem; 
-      letter-spacing: .1rem; 
-      font-weight: 100; 
+    
+    h1, h2 {
       margin: 0; 
-      font-size: 14rem; 
-      line-height: 12rem;
-
+      font-weight: 100;
+    }
+    h1 {
+      font-size: 8.5rem; 
+      line-height: 8rem; 
+      letter-spacing: .1rem; 
     }
 
     h2 {
       font-size: 1.5rem; 
       line-height: 2.2rem; 
       letter-spacing: .1rem; 
-      font-weight: 100;
+    }
+    p {
+      margin: 0;
+      padding-top: 4rem;
     }
 
     a {
       text-decoration: none; 
-      color: hsl(42, 84%, 69%);
+      /*color: hsl(42, 84%, 69%);*/
+      color: rgb(242,231,109);
+    }
+    #url {
+      /*font-weight: 300;*/
+      opacity: .8;
+      /*font-style: italic;*/
+    }
+    footer {
+      font-size: 2rem;
+      position: fixed;
+      /*height: 200px;*/
+      width: 100%;
+      bottom: 0px;
+      padding: 2rem 0;
+    }
+    .footer-left {
+      width: 50%;
+      float: left;
+    }
+    .footer-right {
+      right: 0;
+      /*float: right;*/
     }
     
     /* Phones */
-    @media (min-width: 400px) {
-      h1 {
-        font-size: 8rem;
+    @media (min-width: 550px) {
+      .head {
+        font-size: 6rem;
+        line-height: 5.5rem;
       }
       h2 {
         font-size: 3rem;
@@ -71,26 +336,59 @@
         padding-top: 5rem;
       }
     }
-    @media (min-width: 700px) {
-       h1 {
+/*    @media (min-width: 700px) {
+       .head {
         font-size: 5.5rem; 
         line-height: 5.2rem; 
+      }
     }
-  </style>
-  <script>
-    var newURL = window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
-    console.log(newURL)
-  </script>
+*/  </style>
   
 </head>
 
 <body>
-  <section>
-    <div class="text-column">
-      <h1>I'm beary sorry about this.</h1>
-      <h2>This isn't a page, yet.<br>But it could be yours if you claim the address at <a href="https://thegrid.io/">thegrid.io</a></h2>
+
+  <div class="background">
+    
+  </div>
+
+  <div class="content">
+    <a href="http://thegrid.io">
+      <svg version="1.1" class="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 46 46" enable-background="new 0 0 46 46" xml:space="preserve">
+    <polygon points="46,46 0,46 0,0 46,0 46,2 2,2 2,44 44,44 44,13 13,13 13,33 33,33 33,24 22,24 22,22 35,22 35,35 11,35 11,11 46,11"></polygon>
+      </svg>
+    </a>
+    <div class="">
+      <h1 id="foundingMembers" class="odometer">Grid Bear can't find your page.</h1>
     </div>
-  </section>
+    <p>"<span id="url"></span>" isn't a website yet, but it will be if you claim it at <a href="https://thegrid.io/" target="_blank">thegrid.io</a></p>
+
+      <div class="footer-left">
+        <p>Email <a href="mailto:support@thegrid.io?subject=Hey Yo, I need some help...">support@thegrid.io</a></p>
+      </div>
+      <div class="footer-right">
+        <p>Twitter <a href="https://twitter.com/intent/tweet?screen_name=thegrid" target="_blank">@thegrid</a></p>
+      </div>
+  </div>
+
+  <!-- <section>
+    <div class="text-column">
+      <h1 class="head">Grid Bear can't find your page.</h1>
+      <h2><span id="url"></span></h2>
+      <h2 class="subhead">Claim now at <a class="link"href="https://thegrid.io/">thegrid.io</a></h2>
+    </div>
+  </section> -->
+
+  
+
+  <script>
+    var newURL = window.location.host + window.location.pathname;
+    document.getElementById('url').innerHTML = newURL;
+    // console.log(newURL);
+
+
+    
+  </script>
 
 </body>
 </html>
